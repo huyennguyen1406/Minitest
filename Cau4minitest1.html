@@ -5,46 +5,63 @@
     <title>CAU 4</title>
 </head>
 <body>
-Câu 4. Viết chương trình nhập vào từ ô input, hiện kết quả ra thẻ p:
-a.	Nhập vào a, hiển thị ra chu vi và diện tích và hình vuông độ dài cạnh a
+<!--Câu 4. Viết chương trình nhập vào từ ô input, hiện kết quả ra thẻ p:-->
+<!--a.	Nhập vào a, hiển thị ra chu vi và diện tích và hình vuông độ dài cạnh a-->
 
-<form action="">
-    x = <input type="text" id="a" /> <br>
-    <button type="button" onclick="Perimeter()"><h1>Chu vi hình vuông là: </h1></button> <br>
-    <button type="button" onclick="Square()"><h1>Diện tích hình vuông là: </h1></button>
-    Kết quả: <span id="kq"></span>
-</form>
-<script>
-    function Perimeter() {
-        let a = document.getElementById("a").value;
-        a = parseFloat(a);
-        let Perimeter = a * 4;
-        document.getElementById('kq').innerHTML = Perimeter;
-    }
-    function Square() {
-        let a = document.getElementById("a").value;
-        a = parseFloat(a);
-        let Square = a ** 2;
-        document.getElementById('kq').innerHTML = Square;
-    }
-</script>
+<!--<form action="">-->
+<!--    x = <input type="text" id="a" /> <br>-->
+<!--    <button type="button" onclick="Perimeter()"><h1>Chu vi hình vuông là: </h1></button> <br>-->
+<!--    <button type="button" onclick="Square()"><h1>Diện tích hình vuông là: </h1></button>-->
+<!--    Kết quả: <span id="kq"></span>-->
+<!--</form>-->
+<!--<script>-->
+<!--    function Perimeter() {-->
+<!--        let a = document.getElementById("a").value;-->
+<!--        a = parseFloat(a);-->
+<!--        let Perimeter = a * 4;-->
+<!--        document.getElementById('kq').innerHTML = Perimeter;-->
+<!--    }-->
+<!--    function Square() {-->
+<!--        let a = document.getElementById("a").value;-->
+<!--        a = parseFloat(a);-->
+<!--        let Square = a ** 2;-->
+<!--        document.getElementById('kq').innerHTML = Square;-->
+<!--    }-->
+<!--</script>-->
 
-b.	Nhập vào a và b, tính a^2, a^b
-<script>
-let a = +prompt('Nhập vào số a: ');
-let b = +prompt('Nhập vào số b: ');
-document.write("Bình phương số a là: " + a ** 2);
-document.write("Bình phương số b là: " + b ** 2);
-</script>
-e. Kiểm tra tam giác
+<!--b.	Nhập vào a và b, tính a^2, a^b-->
+<!--<script>-->
+<!--let a = +prompt('Nhập vào số a: ');-->
+<!--let b = +prompt('Nhập vào số b: ');-->
+<!--document.write("Bình phương số a là: " + a ** 2);-->
+<!--document.write("Bình phương số b là: " + b ** 2);-->
+<!--</script>-->
+<!--e. Kiểm tra tam giác-->
 <script>
     let a = +prompt('Nhap vao canh 1 cua tam giac: ');
         let b = +prompt('Nhap vao canh 2 cua tam giac: ');
         let c = +prompt('Nhap vao canh 3 cua tam giac: ');
         if (a > 0 && b > 0 && c > 0 && a + b > c && b + c > a && a + c > b) {
-            alert('a, b, c la 3 canh cua tam giac')
+            if (a === b && a === c && b === c) {
+                alert('a, b, c la tam giac deu');
+            }
+            else if (a === b || a === c || b === c) {
+                alert('a, b, c la tam giac can');
+            }
+            else if (a ** 2 + b ** 2 === c ** 2 || a ** 2 + c ** 2 === b ** 2 || b ** 2 + c ** 2 === a ** 2){
+                alert('a, b, c la 3 canh cua tam giac vuong');
+            } else {
+                alert('a, b, c la 3 canh cua tam giac')
+            }
         } else {
             alert('a, b, c khong phai 3 canh cua tam giac');
         }
+</script>
+<script>
+    function sum(n) {
+        let x = 1;
+        for (let i = 1; i <= n; i++) x += i;
+        return x;
+    }
 </script>
 </html>
