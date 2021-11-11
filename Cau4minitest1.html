@@ -6,36 +6,24 @@
 </head>
 <body>
 <!--Câu 4. Viết chương trình nhập vào từ ô input, hiện kết quả ra thẻ p:-->
-<!--a.	Nhập vào a, hiển thị ra chu vi và diện tích và hình vuông độ dài cạnh a-->
-
-<!--<form action="">-->
-<!--    x = <input type="text" id="a" /> <br>-->
-<!--    <button type="button" onclick="Perimeter()"><h1>Chu vi hình vuông là: </h1></button> <br>-->
-<!--    <button type="button" onclick="Square()"><h1>Diện tích hình vuông là: </h1></button>-->
-<!--    Kết quả: <span id="kq"></span>-->
-<!--</form>-->
-<!--<script>-->
-<!--    function Perimeter() {-->
-<!--        let a = document.getElementById("a").value;-->
-<!--        a = parseFloat(a);-->
-<!--        let Perimeter = a * 4;-->
-<!--        document.getElementById('kq').innerHTML = Perimeter;-->
-<!--    }-->
-<!--    function Square() {-->
-<!--        let a = document.getElementById("a").value;-->
-<!--        a = parseFloat(a);-->
-<!--        let Square = a ** 2;-->
-<!--        document.getElementById('kq').innerHTML = Square;-->
-<!--    }-->
-<!--</script>-->
-
+<!--a.-->
+<input type="number" id="input" onchange="result()">
+<p id="display"></p>
+<script>
+    function result() {
+        let number = +document.getElementById('input').value;
+        let perimeter = 4 * number;
+        let area = number ** 2;
+        document.getElementById('display').innerHTML = 'Chu vi hình vuông là: ' + perimeter + '</br>' + 'Diện tích hình vuông là: ' + area;
+    }
+</script>
 <!--b.	Nhập vào a và b, tính a^2, a^b-->
-<!--<script>-->
-<!--let a = +prompt('Nhập vào số a: ');-->
-<!--let b = +prompt('Nhập vào số b: ');-->
-<!--document.write("Bình phương số a là: " + a ** 2);-->
-<!--document.write("Bình phương số b là: " + b ** 2);-->
-<!--</script>-->
+<script>
+let a = +prompt('Nhập vào số a: ');
+let b = +prompt('Nhập vào số b: ');
+document.write("Bình phương số a là: " + a ** 2);
+document.write("Bình phương số b là: " + b ** 2);
+</script>
 <!--e. Kiểm tra tam giác-->
 <script>
     let a = +prompt('Nhap vao canh 1 cua tam giac: ');
@@ -57,6 +45,7 @@
             alert('a, b, c khong phai 3 canh cua tam giac');
         }
 </script>
+<!--Tính tổng-->
 <script>
     function sum(n) {
         let x = 1;
@@ -64,4 +53,5 @@
         return x;
     }
 </script>
+</body>
 </html>
