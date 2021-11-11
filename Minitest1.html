@@ -24,5 +24,27 @@ Code nhận giá trị từ hộp thoại, hiển thị bình phương số đó
 </script>
 
 Câu 3:
+Câu lệnh nhập vào từ ô input: dùng <input type = "">
+Viết code nhận a và b từ 2 ô input và hiển thị S = a*b ra thẻ h1.
+<h1>Diện tích là: </h1>
+<form action="">
+    x = <input type="text" id="a" /> <br>
+    y = <input type="text" id="b"/> <br>
+    <button type="button" onclick="Square()">Diện tích</button> <br>
+    Kết quả: <span id="kq"></span>
+</form>
+<script>
+    function Square() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+
+        a = parseFloat(a);
+        b = parseFloat(b);
+
+        let Square = a * b;
+        document.getElementById('kq').innerHTML = Square;
+    }
+</script>
+
 </body>
 </html>
