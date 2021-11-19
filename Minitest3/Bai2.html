@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let arr2 = +prompt("Nhập vào phần tử cần kiểm tra: ");
+    let array = [];
+    for (let i = 0; i < arr2.length; i++) {
+        array[i] = prompt("Nhập vào phần tử thứ " + (i + 1) + ": ");
+        }
+    let checkarray = prompt("Nhập vào số: ");
+    let count = 0;
+
+    function check() {
+        for (let i = 0; i < array.length; i++) {
+            if(array[i] === check) {
+                count++;
+            }
+        }
+        alert("Số lượng tìm được là: " + count + " " + typeof (checkarray))
+    }
+
+    check();
+</script>
+</body>
+</html>
